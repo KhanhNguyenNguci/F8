@@ -1,14 +1,124 @@
-h1 {
+h1 { /*element*/
     color: blueviolet;
     font-size: 2rem;
     font-weight: bolder;
 }
 
-.text {
+.text { /*class*/
     color: red;
 }
 
-#first-test {
+#first-test { /*id*/
     color:burlywood;
+    font-weight: bold;
+}
+
+
+/* Khi CSS <= 4 cấp */
+
+/* 'class' Selectors */
+.list { /* Chon tất cả các thẻ có class="list" */
+    color: blue;
+    font-size: 1.5rem;
+}
+
+.list.list1 { /* Chon tất cả các thẻ có CẢ list VÀ list1 được đặt trong thuộc tính class của nó */
+    color: red;
+    font-size: 1rem;
+}
+
+.box .list { /* Chon tất cả các thẻ class="list" là CON (nằm trong box tag) của của một phần tử có class="box" */
+    color: green;
+}
+
+
+
+
+/* 'element' Selectors (can replace element to .class)
+
+*                                      |   *            -   Chọn tất cả các thẻ
+
+element                                |   h2           -   Chọn tất cả các thẻ h2    (giống class 1)
+
+element.class                          |   div.box      -   Chọn tất cả thẻ div có class="box"    (giống class 2)
+
+element, element (or .class, .class)   |   div, h2      -   Chọn tất cả thẻ div và h2
+
+element element                        |   div p        -   Chọn tất cả thẻ p TRONG thẻ div - tức p là CON div, chỉ cần nằm trong div là được  (giống class 3)
+
+element > element                      |   div > p      -   Chọn tất cả thẻ p là CON TRỰC TIẾP của thẻ div
+
+element + element                      |   div + p      -   Chọn thẻ p ĐỨNG LIỀN KỀ sau thẻ div (thường dùng css trừ cho class đầu tiên)
+
+element ~ element                      |   div ~ p      -   Chọn tất cả thẻ p ĐỨNG SAU thẻ div
+
+*/
+
+p {
+    color: blueviolet;
+}
+
+div.list {
+    color: brown;
+    font-size: 2rem;
+}
+
+
+div p {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.title1 {
+    font-style: italic;
+}
+
+.title2 {
+    text-decoration: underline;
+}
+.title3 {
+    text-decoration: line-through;
+}
+
+/*
+.title1, .title2, .title3 {
+    color: blue;
+
+    can replace way below 
+}*/
+.blue-color {
+    color: blue;
+}
+
+.box > .title {
+    color:cornflowerblue;
+    font-weight: bold;
+    text-decoration: line-through;
+}
+
+.box > div >.title {
+    color:red;
+    text-decoration: line-through;
+}
+
+.x1 + .x1 {
+    color: aquamarine;
+}
+
+.x1 + .x3 {
+    color: pink;
+}
+
+p ~ p {
+    color:green;
+    font-weight:bold;
+}
+
+.box1 .heading {
+    color: red
+}
+
+.box2 > .heading {
+    color: rgb(137, 20, 83);
     font-weight: bold;
 }

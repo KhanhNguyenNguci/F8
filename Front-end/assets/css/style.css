@@ -34,7 +34,7 @@ h1 { /*element*/
 
 
 
-/* 'element' Selectors (can replace element to .class)
+/* 'element' Selectors (can replace element to .class or #id)
 
 *                                      |   *            -   Chọn tất cả các thẻ
 
@@ -121,4 +121,11 @@ p ~ p {
 .box2 > .heading {
     color: rgb(137, 20, 83);
     font-weight: bold;
+}
+
+.box1 {
+    height: 100px;
+    width: 50%; /*chiếm 50% độ rộng của body (parent tag)*/
+    font-size: 2rem;
+    background-color: brown;
 }

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta view="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My website</title>
+    <style>
+        :root {
+            --color-text: blue;
+        }
+    
+        * {
+            /*Reset margin*/
+            margin: 0;
+            /*margin default - 8px*/
+        }
+
+        html {
+            font-size: 20px;
+        }
+
+        .box {
+            width: 50%;
+            height: 100px;
+            background-color: rgba(232, 29, 0, 0.3);
+            color: var(--color-text);
+        }
+
+        body {
+            width: 50%;
+
+            /* vw - viewport width, vh - viewport height */
+            .box1 {
+                width: 50vw;
+                height: 100px;
+                margin-left: 20px;
+                background-image: linear-gradient(to left,green, rgb(232, 29, 195), red);
+            }
+        }
+
+        .title {
+            font-size: 2rem; /* ~2*html = 40px */
+            color: var(--color-text);
+        }
+
+        .box1 {
+            font-size: 15px;
+        }
+
+        .title1 {
+            font-size: calc(1em * 2 + 1rem); /* ~2*box1 + html = 2*15px + 20px = 50px*/
+        }
+
+        /* 
+            CSS functions
+            1. var()
+            2. linear-gradient()
+            3. rgba(1,1,1,a)
+            4. rgb(1,1,1)
+            5. calc()
+            6. attr()
+        */
+        a::before {
+            content: "(" attr(href) ") ";
+        }
+    
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="box">Hi</div>
+    </header>
+    <a href="https://fullstack.edu.vn">Đi đến</a> <!--(https://fullstack.edu.vn) Đi đến-->
+    <div class="title">OK</div>
+    <div class="box1">
+        <div class="box2">
+            <div class="title1">OK</div>
+        </div>
+    </div>
+</body>
+
+</html>

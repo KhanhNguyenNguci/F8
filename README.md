@@ -4,7 +4,7 @@ This repository contains the source code for the F8 project, which includes vari
 
 ## Project Structure
 ## Selector CSS
-![Basic Selector](docs/selector#1.png)
+![Basic Selector](docs/selectors#1.png)
 ### Files and Directories
 
 - **`.hintrc`**: Configuration file for development hints.

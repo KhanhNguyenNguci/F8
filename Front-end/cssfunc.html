@@ -118,11 +118,11 @@
         */
 
         .test::before { 
-            content: "Hello Khanh"; /*neccessary - Nhưng content này sẽ không bôi đen được (selection)*/
+            content: "Hello ::first-letter"; /*neccessary - Nhưng content này sẽ không bôi đen được (selection)*/
             display: block; /*xem after - default value is inline*/
             font-size: 12px;
             color: red;
-            width: 75px;
+            width: 100px;
             height: 100px;
             background-color: rosybrown;
         }
@@ -153,10 +153,10 @@
 
 <body>
     <header>
-        <div class="box">Hi</div>
+        <div class="box">Positon/Hover</div>
     </header>
     <a href="https://fullstack.edu.vn">Đi đến</a> <!--(https://fullstack.edu.vn) Đi đến-->
-    <div class="title">OK</div>
+    <div class="title">:active</div>
     <div class="box1">
         <div class="box2">
             <div class="title1">child1</div>
@@ -166,9 +166,9 @@
     <div>
         <!--Nếu xóa class="child" chỗ first (last) thì first-child (last-child) sẽ không hoạt động"-->
         <!-- Để thấy rõ hãy xóa first và commnent khối last -->
-        <!--Ví dụ: Thường xử dụng để loại bỏ margin đầu và cuối của tab menu hay dashboard-->
+        <!--Ví dụ: Thường sử dụng để loại bỏ margin đầu và cuối của tab menu hay dashboard-->
         <div class="child"> <!--first-->
-            child1
+            first-child
         </div>
         <div class="child">
             child2
@@ -177,7 +177,7 @@
             child3
         </div>
         <div class="child"> <!--last--> 
-            child4
+            last-child
         </div>
     </div>
 
@@ -188,7 +188,7 @@
     </div>
 
     <div class="testt">
-        <div>NLK <br/> Le Khanh</div>
+        <div>::selection1 <br/> ::selection2</div>
     </div>
 </body>
 

@@ -20,11 +20,27 @@
             font-size: 20px;
         }
 
-        .box {
+        header {
             width: 50%;
-            height: 100px;
+        }
+
+        .box {
+            position: absolute; 
+            /* xem them positon
+            https://vietnix.vn/position-trong-css/#:~:text=Position%20trong%20CSS%20%C4%91%C6%B0%E1%BB%A3c%20s%E1%BB%AD,
+            li%C3%AAn%20quan%20%C4%91%E1%BA%BFn%20v%E1%BB%8B%20tr%C3%AD.
+            */
+            width: 50px;
+            height: 50px;
             background-color: rgba(232, 29, 0, 0.3);
             color: var(--color-text);
+
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            /* margin-left: auto; */
         }
 
         body {

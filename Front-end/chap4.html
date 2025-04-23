@@ -1,57 +1,141 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta view="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Chapter 4</title>
-        <style>
-            * {
-                margin: 0; /* reset margin */
-            }
-            .box {
-                width: 100px;
-                height: 100px;
-                color: aliceblue;
-                
-                /*can giua noi dung trong box*/
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                float: left; /* ========canh trái nằm ngang======== */
-            }
-            .box1 {
-                background-color: blue;
-                /* border-width: 4px;
+
+<head>
+    <meta charset="UTF-8">
+    <meta view="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 4</title>
+    <style>
+        * {
+            margin: 0;
+            /* reset margin */
+            padding: 0;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            color: aliceblue;
+
+            /*can giua noi dung trong box*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            float: left;
+            /* ========canh trái nằm ngang======== */
+        }
+
+        .box1 {
+            background-color: blue;
+            /* border-width: 4px;
                 border-style: dashed;
                 border-color: #333; */
-                border: 4px dashed #333; /* can replace boder-top/bottom/l/r/... */
-                border-bottom-right-radius: 10px;
-            }
-            .box2 {
-                background-color: black;
-                /* margin-top: 10px;
+            border: 4px dashed #333;
+            /* can replace boder-top/bottom/l/r/... */
+            border-bottom-right-radius: 10px;
+        }
+
+        .box2 {
+            background-color: black;
+            /* margin-top: 10px;
                 margin-left: 10px;
                 margin-bottom: 10px; */
-                margin: 10px 5px 2.5px;
-            }
-            .box3 {
-                background-color: green;
-                /* padding-left: 10px;
+            margin: 10px 5px 2.5px;
+        }
+
+        .box3 {
+            background-color: green;
+            /* padding-left: 10px;
                 padding-top: 20px; */
-                padding: 10px 15px; 
-                margin-left: 0px;
-                /*
+            padding: 10px 15px;
+            margin-left: 0px;
+            /*
                 2 params | top-bot left-right 
                 3 params | top left-right bot
                 4 params | top right bot left (chiều kim đồng hồ)
                 */
-            }
-        </style>
-    </head>
+        }
 
-    <body>
-        <div class="box box1">Box 1</div>
-        <div class="box box2">Box 2</div>
-        <div class="box box3">Box 3</div>
-    </body>
+        .content {
+            clear: both;
+            /* ====== Đảm bảo xuống dòng mới, không bị ảnh hưởng bởi các phần tử float ====== */
+            display: block;
+            /* Đảm bảo nội dung hiển thị như một khối */
+
+            padding: 16px;
+        }
+
+        .content-box {
+            border: 2px solid #ccc;
+            border-radius: 16px;
+            margin-top: 5px;
+        }
+        .post-list {
+            margin: 5px;
+        }
+
+        .desc {
+            margin: 10px;
+        }
+
+        .desc .title a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .post-time {
+            margin-top: 10px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box box1">Box 1</div>
+    <div class="box box2">Box 2</div>
+    <div class="box box3">Box 3</div>
+
+    <div class="content">
+        <h1 class="heading">Bài viết nổi bật</h1>
+        <div class="post-list">
+            <div class="content-box">
+                <div class="desc">
+                    <h2 class="title">
+                        <a href="https://fullstack.edu.vn/blog/tim-hieu-ve-html-va-css.html">Tìm hiểu về HTML và CSS</a>
+                    </h2>
+                    <p>
+                        Bài viết sẽ giới thiệu về HTML, CSS là gì, các thẻ cơ bản HTML, CSS. Mục đích của bài viết để tổng
+                        hợp kiến thức cơ bản về HTML, CSS. Hy vọng được thảo luận....
+                    </p>
+                    <p class="post-time">17 phút trước</p>
+                </div>
+            </div>
+            <div class="content-box">
+                <div class="desc">
+                    <h2 class="title">
+                        <a href="https://fullstack.edu.vn/blog/update-cach-su-dung-package-sass-1.html">Update cách sử dụng Package SASS</a>
+                    </h2>
+                    <p>
+                        Tên cũ là package này Node-sass. Nhưng gần đây họ đã bỏ hỗ trợ Node-sass nên khi cài bạn sẽ nhận
+                        được warning của...
+                    </p>
+                    <p class="post-time">17 phút trước</p>
+                </div>
+            </div>
+            <div class="content-box">
+                <div class="desc">
+                    <h2 class="title">
+                        <a href="https://fullstack.edu.vn/blog/thoi-gian-va-dong-luc.html">Thời gian và Động lực?</a>
+                    </h2>
+                    <p>
+                        Có lẽ cũng rất lâu rồi mà tôi chưa đụng đến thứ được gọi là "timetable". Hay dân dã hơn thì người ta
+                        hay gọi là "Lịch thường nhật",...
+                    </p>
+                    <p class="post-time">17 phút trước</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>

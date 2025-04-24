@@ -50,7 +50,7 @@
             padding: 10px 15px;
             margin-left: 0px;
             /*
-                2 params | top-bot left-right 
+                2 params | top-bot left-right
                 3 params | top left-right bot
                 4 params | top right bot left (chiều kim đồng hồ)
                 */
@@ -68,24 +68,30 @@
         .content-box {
             border: 2px solid #ccc;
             border-radius: 16px;
-            margin-top: 5px;
+            margin-bottom: 16px;
+            padding: 12px 14px;
         }
+
+        .content-box:hover {
+            background-color: #f0f0f0;
+            cursor: pointer;
+        }
+
         .post-list {
-            margin: 5px;
+            margin-top: 32px;
         }
 
-        .desc {
-            margin: 10px;
-        }
-
-        .desc .title a {
+        .content-box .title a {
             text-decoration: none;
             color: #333;
         }
 
-        .post-time {
-            margin-top: 10px;
+        .content-box .post-time {
+            margin-top: 12px;
             color: #666;
+        }
+        .content-box .desc {
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -99,40 +105,35 @@
         <h1 class="heading">Bài viết nổi bật</h1>
         <div class="post-list">
             <div class="content-box">
-                <div class="desc">
-                    <h2 class="title">
-                        <a href="https://fullstack.edu.vn/blog/tim-hieu-ve-html-va-css.html">Tìm hiểu về HTML và CSS</a>
-                    </h2>
-                    <p>
-                        Bài viết sẽ giới thiệu về HTML, CSS là gì, các thẻ cơ bản HTML, CSS. Mục đích của bài viết để tổng
-                        hợp kiến thức cơ bản về HTML, CSS. Hy vọng được thảo luận....
-                    </p>
-                    <p class="post-time">17 phút trước</p>
-                </div>
+                <h2 class="title">
+                    <a href="https://fullstack.edu.vn/blog/tim-hieu-ve-html-va-css.html">Tìm hiểu về HTML và CSS</a>
+                </h2>
+                <p class="desc">
+                    Bài viết sẽ giới thiệu về HTML, CSS là gì, các thẻ cơ bản HTML, CSS. Mục đích của bài viết để tổng
+                    hợp kiến thức cơ bản về HTML, CSS. Hy vọng được thảo luận....
+                </p>
+                <p class="post-time">17 phút trước</p>
             </div>
             <div class="content-box">
-                <div class="desc">
-                    <h2 class="title">
-                        <a href="https://fullstack.edu.vn/blog/update-cach-su-dung-package-sass-1.html">Update cách sử dụng Package SASS</a>
-                    </h2>
-                    <p>
-                        Tên cũ là package này Node-sass. Nhưng gần đây họ đã bỏ hỗ trợ Node-sass nên khi cài bạn sẽ nhận
-                        được warning của...
-                    </p>
-                    <p class="post-time">17 phút trước</p>
-                </div>
+                <h2 class="title">
+                    <a href="https://fullstack.edu.vn/blog/update-cach-su-dung-package-sass-1.html">Update cách sử dụng
+                        Package SASS</a>
+                </h2>
+                <p class="desc">
+                    Tên cũ là package này Node-sass. Nhưng gần đây họ đã bỏ hỗ trợ Node-sass nên khi cài bạn sẽ nhận
+                    được warning của...
+                </p>
+                <p class="post-time">17 phút trước</p>
             </div>
             <div class="content-box">
-                <div class="desc">
-                    <h2 class="title">
-                        <a href="https://fullstack.edu.vn/blog/thoi-gian-va-dong-luc.html">Thời gian và Động lực?</a>
-                    </h2>
-                    <p>
-                        Có lẽ cũng rất lâu rồi mà tôi chưa đụng đến thứ được gọi là "timetable". Hay dân dã hơn thì người ta
-                        hay gọi là "Lịch thường nhật",...
-                    </p>
-                    <p class="post-time">17 phút trước</p>
-                </div>
+                <h2 class="title">
+                    <a href="https://fullstack.edu.vn/blog/thoi-gian-va-dong-luc.html">Thời gian và Động lực?</a>
+                </h2>
+                <p class="desc">
+                    Có lẽ cũng rất lâu rồi mà tôi chưa đụng đến thứ được gọi là "timetable". Hay dân dã hơn thì người ta
+                    hay gọi là "Lịch thường nhật",...
+                </p>
+                <p class="post-time">17 phút trước</p>
             </div>
         </div>
     </div>

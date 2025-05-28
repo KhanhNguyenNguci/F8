@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <title>Chapter 6 - Position</title>
+        <style>
+            html, body {
+                margin: 0;
+            }
+
+            h1 {
+                /* position: relative;
+                top: 100px; */
+                margin: 0;
+            }
+            
+            .box {
+                width: 100%;
+                height: 100px;
+                background-color: red;
+                position: relative;
+            }
+
+            .box-child {
+                width: 50px;
+                height: 20px;
+                background-color: rgba(255, 255, 255, 0.5); /* Ứng dụng làm mờ layout áp dụng absolute cùng cả 4 thuộc tính top/bottom/left/right (bỏ width/height) */
+                position: absolute;
+                /* bottom: 10px;
+                /* left: 10px; */
+                right: 10px;
+                bottom: 0;
+            }
+
+            .box1 {
+                width: 300px;
+                height: 40px;
+                background-color: rgb(32, 44, 44);
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+
+            ul {
+                height: 2000px;
+            }
+
+            .bar {
+                height: 50px;
+                background-color: #333;
+                position: fixed;
+                top: 0;
+                right: 0;
+                left: 0;
+            }
+            .stick {
+                color: white;
+                padding: 0 15px;
+                background-color: #333;
+                position: sticky;
+                position: -webkit-sticky; /*for IOS*/
+                top: 5px;
+            }
+            .content1 {
+                margin-top: 50px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- <div class="box">
+            <div class="box1">
+                <div class="box-child">KAKA</div>
+            </div>
+        </div> -->
+        <!-- <div class="bar"></div> -->
+        <h2 class="stick">OK</h2>
+        <div class="content1">
+            <h1>Postion Attribute</h1>
+            <ul>
+                <li>Relative</li>
+                <li>Absolute</li>
+                <li>Fixed</li>
+                <li>Sticky</li>
+            </ul>
+        </div>
+    </body>
+</html>

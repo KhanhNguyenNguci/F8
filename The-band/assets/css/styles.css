@@ -43,24 +43,46 @@ html {
 
 .nav li {
     display: inline-block;
+    position: relative;
 }
 
 .nav li a {
     text-decoration: none;
-    color: red;
+    color: #fff;
     line-height: var(--header-height);
     padding: 0 24px;
+    display: inherit; /* ~ inline-block */
 }
 
 .nav .subnav {
     display: none;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+    min-width: 160px;
+    position: absolute;
+    top: 100%; /* = line-height cua cha = 46px - Optional */
+    left: 0; /* canh trai - Optional */
 }
 
-.nav li:hover a {
+.nav li:hover > a {
     background-color: #ccc;
-    display: inherit; /* ~ inline-block */
+    color: #000;
 }
 
-/* .nav li:hover .subnav {
+.nav li:hover .subnav {
     display: block;
-} */
+    background-color: #fff;
+}
+
+.subnav li {
+    display: block;
+}
+
+.nav > li > a {
+    text-transform: uppercase;
+}
+
+.subnav li a {
+    color: #000;
+    padding: 0 16px;
+    line-height: 38px;
+}

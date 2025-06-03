@@ -86,3 +86,17 @@ html {
     padding: 0 16px;
     line-height: 38px;
 }
+
+.search .ti-search {
+    color: #fff;
+    font-size: 14px;
+    font-weight: bolder;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 16px 24px;
+}
+
+.search .ti-search:hover {
+    background-color: #f44336;
+}
